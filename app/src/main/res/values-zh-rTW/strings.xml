@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">摩斯俠</string>
+    <string name="title_home">主頁</string>
+    <string name="title_camera">識別</string>
+    <string name="title_help">幫助</string>
+    <string name="list_title_char">字元</string>
+    <string name="list_title_morse">摩爾斯碼</string>
+    <string name="btn_delete">删除</string>
+    <string name="btn_space">空格</string>
+    <string name="original">原文</string>
+    <string name="btn_screen">荧幕</string>
+    <string name="btn_flashlight">手電筒</string>
+    <string name="btn_stop">停止</string>
+    <string name="morse_tips">為便於閱讀摩爾斯電碼，\n字元之間以“，”隔開，空格用“/”表示。</string>
+    <string name="ask_camera_permission">需要攝像頭許可權。</string>
+    <string name="quit">退出</string>
+</resources>

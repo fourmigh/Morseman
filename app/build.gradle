@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.sdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "org.caojun.morseman"
+        minSdkVersion 14
+        targetSdkVersion rootProject.ext.sdkVersion
+        versionCode 2
+        versionName "1.1.0"
+
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$androidsupport_version"
+    implementation "com.android.support:design:$androidsupport_version"
+    implementation 'com.android.support.constraint:constraint-layout:latest.release'
+    implementation "com.android.support:support-vector-drawable:$androidsupport_version"
+    implementation 'org.jetbrains.anko:anko-common:latest.release'
+    implementation project(':UtilsLibrary')
+}
